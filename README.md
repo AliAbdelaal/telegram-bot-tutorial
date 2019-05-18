@@ -15,6 +15,8 @@ you will need to have the following
 
 ## Create the bot on telegram first
 
+![bot-creating-in-telegram](assets/createbot.png)
+
 before we dive into coding, let's finish the easy stuff, we need to ask telegram to create a new bot on the platform, it's a fairly simple process, you can do so in your telegram app(on [windows/linux/android/ios/web](https://telegram.org/apps)) you need to go to [botfather](https://telegram.me/botfather) which is basically a bot himself that automate the process of creating your bot.
 
 you will need to ask him using the `/` prefix to start a command, once you start typing it will autocomplete itself, the command you need is `/newbot`, which will take you to the flow of creating your bot, the bot will prompt you for a name and username for the bot (the username has to be unique), then it will respone with a message like so
@@ -206,7 +208,11 @@ we need a couple of things before we make our app.
 
 * **A bounce step**: you can add [.gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore) file to your project so that no-use files don't get uploaded to the repository.
 
-* from your [dashboard](https://dashboard.heroku.com/apps) on heroku create a new app, once you create an app it will direct you to the deploy page, open the **settings** tab in new window and copy the domain of the app which will be something like `https://appname.herokuapp.com/` and paste it in the URL variable inside our `credentials.py`, now go back to the **deploy** tab and proceed with the steps:
+* from your [dashboard](https://dashboard.heroku.com/apps) on heroku create a new app, once you create an app it will direct you to the deploy page, open the **settings** tab in new window and copy the domain of the app which will be something like `https://appname.herokuapp.com/` and paste it in the URL variable inside our `credentials.py`
+
+![project-url](assets/heroku-url.png)
+
+now go back to the **deploy** tab and proceed with the steps:
   * login to heroku
 
     ```cmd
