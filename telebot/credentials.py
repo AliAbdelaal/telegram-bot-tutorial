@@ -1,3 +1,3 @@
-bot_token = "811553267:AAGuXanSU83uEnlzxKD6ozJOVioCPDIZ8tI"
-bot_user_name = "thegithubot"
-URL = "https://heruko-hello-flask.herokuapp.com/"
+bot_token = "BOT-TOKEN-GOES-HERE"
+bot_user_name = "BOT-USER-NAME"
+URL = "THE-HEROKU-APP-LINK"
