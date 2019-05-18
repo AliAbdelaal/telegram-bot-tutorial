@@ -65,6 +65,7 @@ that's all we need for now, let's structure our project in a neat way before we 
 ├── app.py
 ├── telebot
 │   ├── credentials.py
+│   ├── mastermind.py
 │   |   .
 │   |   you can build your engine here
 │   |   .
@@ -80,6 +81,19 @@ bot_user_name = "bot username"
 URL = "the heroku app link that we will create later"
 ```
 
+in `mastermind.py` you could use your super AI to generate response
+
+```python
+def get_response(msg):
+    """
+    you can place your mastermind AI here
+    could be a very basic simple response like "معلش"
+    or a complex LSTM network that generate appropriate answer
+
+    """
+    return "معلش !"
+```
+
 now let's go back to our `app.py` and go throw the code step by step
 
 ```python
@@ -87,6 +101,7 @@ now let's go back to our `app.py` and go throw the code step by step
 from flask import Flask, request
 import telegram
 from telebot.credentials import bot_token, bot_user_name,URL
+from telebot.mastermind import get_response
 ```
 
 now let's create global objects for the bot and the token
@@ -125,10 +140,8 @@ def respond():
     text = update.message.text.encode('utf-8').decode()
     print("got text message :", text)
 
-    # here you can call whatever function you want
-    # could be a very basic simple response like "معلش"
-    # or a complex LSTM network that generate appropriate answer
-    response = "معلش"
+    # here we call our super AI
+    response = get_response(text)
 
     # now just send the message back
     # notice how we specify the chat and the msg we reply to

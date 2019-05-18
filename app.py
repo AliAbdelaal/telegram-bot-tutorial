@@ -1,6 +1,7 @@
 from flask import Flask, request
 import telegram
 from telebot.credentials import bot_token, bot_user_name,URL
+from telebot.mastermind import get_response
 
 
 global bot
@@ -22,7 +23,7 @@ def respond():
     text = update.message.text.encode('utf-8').decode()
     print("got text message :", text)
 
-    response = "معلش !"
+    response = get_response(text)
     bot.sendMessage(chat_id=chat_id, text=response, reply_to_message_id=msg_id)
 
     return 'ok'
