@@ -55,9 +55,7 @@ $source venv/bin/activate
 now let's have some libs installed
 
 ```cmd
-(venv) $pip install flask
-(venv) $pip install python-telegram-bot
-(venv) $pip install requests
+(venv) $pip install flask python-telegram-bot requests gunicorn
 ```
 
 that's all we need for now, let's structure our project in a neat way before we start the real coding
